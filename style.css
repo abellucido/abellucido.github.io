@@ -39,8 +39,8 @@ header {
   flex: 1;
 }
 .description-box h1 {
-  font-size: 2.7rem;
-  margin-bottom: 5px;
+  font-size: 2.5rem;
+  margin-bottom: 1px;
   color: #222;
 }
 
