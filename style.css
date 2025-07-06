@@ -64,13 +64,18 @@ header {
 }
 
 .social-icons a {
+  display: inline-block;
   color: #333;
   font-size: 1.5rem;
-  margin-right: 15px;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #0077b5; /* LinkedIn blue or any hover color */
+  background-color: #0077b5; /* Change background on hover */
+  color: white;
 }
