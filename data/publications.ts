@@ -4,6 +4,8 @@ export type Publication = {
   journal: string;
   year: number;
   doi: string;
+  image: string;
+  imageAlt: string;
 };
 
 export const publications: Publication[] = [
@@ -15,6 +17,8 @@ export const publications: Publication[] = [
     journal: "Plants, 14(3)",
     year: 2025,
     doi: "10.3390/plants14030470",
+    image: "/images/multiscale.png",
+    imageAlt: "Multiscale workflow",
   },
   {
     title:
@@ -24,6 +28,8 @@ export const publications: Publication[] = [
     journal: "Frontiers in Plant Science, 14",
     year: 2024,
     doi: "10.3389/fpls.2023.1329556",
+    image: "/images/rsa.png",
+    imageAlt: "3D root system architecture model",
   },
   {
     title: "A mathematical model for strigolactone biosynthesis in plants",
@@ -32,13 +38,17 @@ export const publications: Publication[] = [
     journal: "Frontiers in Plant Science, 13",
     year: 2022,
     doi: "10.3389/fpls.2022.979162",
+    image: "/images/biosynthesis.png",
+    imageAlt: "Strigolactone biosynthesis model",
   },
   {
     title: "Prevention of H5N6 outbreaks in the Philippines using optimal control",
     authors: "Lucido, A.G., Smith?, R., & Lao, A.R.",
-    journal: "JOURNAL NAME, 13(2), 18",
+    journal: "Philippine Science Letters, 13(2), 158–173",
     year: 2020,
-    doi: "",
+    doi: "10.54645/2020132PGZ-12",
+    image: "/images/bird.png",
+    imageAlt: "Avian influenza model",
   },
   {
     title:
@@ -48,6 +58,8 @@ export const publications: Publication[] = [
     journal: "Frontiers in Plant Science, 15",
     year: 2024,
     doi: "10.3389/fpls.2024.1465030",
+    image: "/images/daytime.jpg",
+    imageAlt: "Effect of daytime duration on terpenoid precursors",
   },
   {
     title:
@@ -57,6 +69,8 @@ export const publications: Publication[] = [
     journal: "Frontiers in Plant Science, 14, 1133299",
     year: 2023,
     doi: "10.3389/fpls.2023.1133299",
+    image: "/images/rice.jpg",
+    imageAlt: "Terpenoid model",
   },
   {
     title:
@@ -66,5 +80,7 @@ export const publications: Publication[] = [
     journal: "Scientific Reports, 14(1), 19531",
     year: 2024,
     doi: "10.1038/s41598-024-70018-0",
+    image: "/images/assembly.webp",
+    imageAlt: "Genome assembly",
   },
 ];
