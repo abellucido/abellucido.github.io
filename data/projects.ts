@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Chatbot that recommends restaurants by calling tools on a Model Context Protocol server, so answers come from data rather than the model. Runs locally with Ollama and is tested in CI.",
     tech: ["Python", "MCP", "LangChain", "Ollama", "Gradio", "pytest"],
     link: "https://github.com/abellucido/restaurant-concierge-mcp",
-    featured: false,
+    featured: true,
   },
   {
     slug: "protein-variant-design",
