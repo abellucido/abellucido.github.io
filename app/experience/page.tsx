@@ -10,11 +10,11 @@ export default function ExperiencePage() {
           <section key={job.company + job.start}>
             <div className="flex flex-wrap items-baseline justify-between gap-2">
               <h2 className="text-xl font-semibold">{job.title}</h2>
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-muted">
                 {job.start} – {job.end}
               </span>
             </div>
-            <p className="text-gray-600">
+            <p className="text-muted">
               {job.company} · {job.location}
             </p>
             <ul className="mt-3 list-disc space-y-1 pl-5">

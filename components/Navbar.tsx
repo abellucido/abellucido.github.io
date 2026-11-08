@@ -24,7 +24,7 @@ export default function Navbar({ id, visibleClass, onNavigate }: NavbarProps) {
   return (
     <aside
       id={id}
-      className={`fixed inset-y-0 left-0 z-40 flex w-60 flex-col border-r border-gray-200 bg-background px-5 pt-20 pb-6 transition-transform duration-200 ${visibleClass}`}
+      className={`fixed inset-y-0 left-0 z-40 flex w-60 flex-col border-r border-line bg-surface px-5 pt-20 pb-6 transition-transform duration-200 ${visibleClass}`}
     >
       <Link
         href="/"
@@ -33,7 +33,7 @@ export default function Navbar({ id, visibleClass, onNavigate }: NavbarProps) {
       >
         {profile.name}
       </Link>
-      <p className="mt-1 text-sm text-gray-500">{profile.role}</p>
+      <p className="mt-1 text-sm text-muted">{profile.role}</p>
 
       <nav className="mt-8 flex flex-col gap-1 text-sm">
         {links.map((link) => {
@@ -46,8 +46,8 @@ export default function Navbar({ id, visibleClass, onNavigate }: NavbarProps) {
               aria-current={active ? "page" : undefined}
               className={`rounded-md px-3 py-2 transition-colors ${
                 active
-                  ? "bg-gray-100 font-medium text-gray-900"
-                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                  ? "bg-accent font-medium text-white"
+                  : "text-muted hover:bg-chip hover:text-foreground"
               }`}
             >
               {link.label}

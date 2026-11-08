@@ -40,7 +40,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
         onClick={toggle}
         aria-controls={SIDEBAR_ID}
         aria-label="Toggle navigation"
-        className="fixed top-4 left-4 z-50 rounded-md border border-gray-200 bg-background p-2 text-gray-700 shadow-sm transition-colors hover:bg-gray-50"
+        className="fixed top-4 left-4 z-50 rounded-md border border-line bg-background p-2 text-accent shadow-sm transition-colors hover:bg-chip"
       >
         <svg
           width="20"

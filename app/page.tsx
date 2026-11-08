@@ -19,11 +19,11 @@ export default function Home() {
         />
         <div>
           <h1 className="text-3xl font-bold">{profile.name}</h1>
-          <p className="mt-1 text-gray-500">{profile.role}</p>
+          <p className="mt-1 text-muted">{profile.role}</p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm">
             <a
               href={`mailto:${profile.email}`}
-              className="text-blue-600 hover:underline"
+              className="text-secondary underline decoration-line underline-offset-4 transition-colors hover:text-foreground hover:decoration-current"
             >
               Email
             </a>
@@ -33,7 +33,7 @@ export default function Home() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
+                className="text-secondary underline decoration-line underline-offset-4 transition-colors hover:text-foreground hover:decoration-current"
               >
                 {link.label}
               </a>
@@ -50,7 +50,7 @@ export default function Home() {
       <section className="mt-12">
         <div className="flex items-baseline justify-between gap-2">
           <h2 className="text-xl font-semibold">Featured projects</h2>
-          <Link href="/projects" className="text-sm text-blue-600 hover:underline">
+          <Link href="/projects" className="text-sm text-secondary underline decoration-line underline-offset-4 transition-colors hover:text-foreground hover:decoration-current">
             All projects →
           </Link>
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
           {featured.map((project) => (
             <li key={project.slug}>
               <h3 className="font-medium">{project.title}</h3>
-              <p className="text-gray-600">{project.summary}</p>
+              <p className="text-muted">{project.summary}</p>
             </li>
           ))}
         </ul>
@@ -74,9 +74,9 @@ export default function Home() {
             >
               <div>
                 <p className="font-medium">{item.degree}</p>
-                <p className="text-gray-600">{item.school}</p>
+                <p className="text-muted">{item.school}</p>
               </div>
-              <span className="text-sm text-gray-500">{item.year}</span>
+              <span className="text-sm text-muted">{item.year}</span>
             </li>
           ))}
         </ul>
