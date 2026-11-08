@@ -3,10 +3,10 @@ import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
+    <main className="w-full px-6 py-16 sm:px-10 lg:px-16">
       <h1 className="text-3xl font-bold">Projects</h1>
 
-      <div className="mt-10 grid gap-8 sm:grid-cols-2">
+      <div className="mt-10 grid gap-8 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {projects.map((project) => (
           <article
             key={project.slug}

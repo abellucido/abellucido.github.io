@@ -7,18 +7,18 @@ export default function Home() {
   const featured = projects.filter((project) => project.featured);
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-16">
-      <section className="flex flex-col gap-8 sm:flex-row sm:items-center">
+    <main className="w-full px-6 py-16 sm:px-10 lg:px-16">
+      <section className="flex flex-col gap-10 md:flex-row md:items-start">
         <Image
           src={profile.photo}
           alt={profile.name}
-          width={160}
-          height={160}
+          width={448}
+          height={590}
           priority
-          className="h-40 w-40 shrink-0 rounded-full object-cover"
+          className="h-auto w-48 shrink-0 object-cover lg:w-60"
         />
-        <div>
-          <h1 className="text-3xl font-bold">{profile.name}</h1>
+        <div className="max-w-3xl">
+          <h1 className="text-4xl font-bold lg:text-5xl">{profile.name}</h1>
           <p className="mt-1 text-muted">{profile.role}</p>
           <div className="mt-4 flex flex-wrap gap-4 text-sm">
             <a
@@ -39,38 +39,41 @@ export default function Home() {
               </a>
             ))}
           </div>
+
+          <div className="mt-8 space-y-4 leading-7">
+            <p>{profile.intro}</p>
+            <p>{profile.research}</p>
+          </div>
         </div>
       </section>
 
-      <section className="mt-10 space-y-4 leading-7">
-        <p>{profile.intro}</p>
-        <p>{profile.research}</p>
-      </section>
-
-      <section className="mt-12">
+      <section className="mt-16">
         <div className="flex items-baseline justify-between gap-2">
           <h2 className="text-xl font-semibold">Featured projects</h2>
           <Link href="/projects" className="text-sm text-secondary underline decoration-line underline-offset-4 transition-colors hover:text-foreground hover:decoration-current">
             All projects →
           </Link>
         </div>
-        <ul className="mt-4 space-y-4">
+        <ul className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {featured.map((project) => (
-            <li key={project.slug}>
+            <li
+              key={project.slug}
+              className="rounded-xl border border-line p-5"
+            >
               <h3 className="font-medium">{project.title}</h3>
-              <p className="text-muted">{project.summary}</p>
+              <p className="mt-2 text-muted">{project.summary}</p>
             </li>
           ))}
         </ul>
       </section>
 
-      <section className="mt-12">
+      <section className="mt-16">
         <h2 className="text-xl font-semibold">Education</h2>
-        <ul className="mt-4 space-y-3">
+        <ul className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {education.map((item) => (
             <li
               key={item.degree}
-              className="flex flex-wrap items-baseline justify-between gap-2"
+              className="flex flex-wrap items-baseline justify-between gap-2 rounded-xl border border-line p-5"
             >
               <div>
                 <p className="font-medium">{item.degree}</p>

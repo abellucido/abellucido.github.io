@@ -3,10 +3,10 @@ import { publications } from "@/data/publications";
 
 export default function PublicationsPage() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
+    <main className="w-full px-6 py-16 sm:px-10 lg:px-16">
       <h1 className="text-3xl font-bold">Publications</h1>
 
-      <div className="mt-10 space-y-10">
+      <div className="mt-10 grid gap-x-16 gap-y-12 xl:grid-cols-2">
         {publications.map((article) => (
           <section
             key={article.title}
